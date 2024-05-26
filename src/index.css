@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(181, 197, 223);
+}
+.container {
+  height: 95vh;
+  width: 60vw;
+  border: 1px solid grey;
+  border-radius: 1em;
+  box-shadow: 1px 1px 6px 3px rgb(140, 140, 140);
+  transform: translate(20vw, 2.5vh);
+  background-color: rgb(204, 204, 204);
+  
+
+  overflow: scroll;
+}
+.header {
+  height: 18rem;
+  background-image: url(/public/header.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  overflow: scroll;
+  position: sticky;
+  top: 0;
+}
+.headerText {
+  color: white;
+  font-size: 3rem;
+  padding:18.5% 24% 0 2%;
+  text-align: start;
+}
+.date {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.countDiv {
+  background-color: rgba(0, 0, 0, 0.204);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+.count {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+.taskField {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffffe1;
+  border-radius: 2rem;
+  margin: 2rem 0  1rem;
+  width:60%;
+  height:3rem;
+  margin-left:20%;
+  font-size: 1.1rem;
+  
+}
+
+.add {
+  height:3rem;
+  width: 15vw;
+  border-radius: 2rem;
+  border: none;
+  text-decoration:double;
+  background-color: rgb(190, 208, 241);
+  color: rgb(11, 7, 92);
+  font-size: 1.1rem;
+}
+
+.taskDes {
+  border-radius: 2rem;
+  color: rgb(0, 41, 128);
+  width: 60vw;
+  height: 5vh;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+#taskList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+li:not(.list) {
+  list-style-type: none;
+  border-radius: 4rem;
+  margin: 0.4rem 0;
+  width: 60%;
+}
+.list {
+  border-radius: 4rem;
+  list-style-type: none;
+  padding: 0.8rem;
+  list-style-type: none;
+  color: white;
+  width: 100%;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: scroll;
+}
+li:nth-child(odd) {
+  background-color: rgba(68, 68, 68, 0.764);
+}
+li:nth-child(even) {
+  background-color: rgba(0, 21, 75, 0.873);
+}
+li:hover{
+  background-color: rgba(25, 25, 25, 0.765);
+  
+}
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+.taskText{
+outline:none;
+border: none;
+background-color: transparent; 
+color:white;
+font-size: 1.1rem;
+width: 90%;
+height:40%;
+margin-right: 0.5rem;
+margin-left: 0.3rem;
+overflow:visible;
+resize: none;
+}
+
+.delete {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid rgb(75, 75, 75);
+  color: rgb(74, 74, 74);
+}
+
+.check:checked + .taskText {
+  text-decoration: line-through;
+}
+button {
+  cursor: pointer;
+}
+@media screen and (max-width:1200px) {
+  .container {
+    height: 95vh;
+    width: 80vw;
+    transform: translate(10vw, 2.5vh);}
+    li:not(.list){
+      width: 80%;
+    }
+    .headerText {
+      color: white;
+      font-size: 2.5rem;
+      padding:20% 25% 0 1%;
+      text-align: start;
+    }
+    .taskField{
+      width:80%;
+    margin-left:10%;
+    }
+    
+    
+}
+@media screen and (max-width:600px){
+  .container {
+    height: 95vh;
+    width: 95vw;
+    transform: translate(2.5vw, 2.5vh);}
+    
+    .header{
+      height:15rem;
+    }
+    .headerText {
+      color: white;
+      font-size: 2rem;
+      padding:24% 17% 0 5%;
+      text-align: start;
+      
+    }
+    
+}
+@media screen and (max-width:350px){
+  .count{
+    font-size: 1em;
+  }
+ 
+  .countDiv {
+    background-color: rgba(0, 0, 0, 0.198);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+  }
+  
+}
+@media screen and (max-height:650px){
+ .header{
+
+  position: static;
+ }
+
+}
+.cBox{
+  height:40vh;
+  width:40vw;
+  background-color: white;
+
+}
